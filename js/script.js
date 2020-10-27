@@ -33,6 +33,11 @@ function loopPokemonList(pokemon) {
     document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m)" + "</p>");
   }
 }
+
+function checkObjectKeys(pokemon){
+  console.log(Object.keys(pokemon));
+}
 pokemonRepository.add({ name: 'Pikachu', height: 0.4, type: ['electric'] });
 pokemonRepository.add('Raichu'); // Test for validation
 pokemonRepository.getAll().forEach(loopPokemonList);
+pokemonRepository.getAll().forEach(checkObjectKeys); // Check if all pokemon entry's have the same pattern
