@@ -31,10 +31,11 @@ pokemonList = [
   }
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height >= 2) {
-    document.write("<p>" + pokemonList[i].name + "(height: " + pokemonList[i].height + "m) " + "- Wow, that's big" + "</p>");
+function loopPokemonList(pokemon) {
+  if (pokemon.height >= 2) {
+    document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m) " + "- Wow, that's big" + "</p>");
   } else {
-    document.write("<p>" + pokemonList[i].name + "(height: " + pokemonList[i].height + "m)" + "</p>");
+    document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m)" + "</p>");
   }
 }
+pokemonList.forEach(loopPokemonList);
