@@ -9,7 +9,11 @@ let pokemonRepository = (function () {
   ];
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    if (typeof pokemon === 'object') {
+      pokemonList.push(pokemon);
+    } else {
+      console.log('The pokemon you want to add is not a object type!');
+    }
   }
 
   function getAll() {
@@ -22,8 +26,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-
-
 function loopPokemonList(pokemon) {
   if (pokemon.height >= 2) {
     document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m) " + "- Wow, that's big" + "</p>");
@@ -31,4 +33,6 @@ function loopPokemonList(pokemon) {
     document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m)" + "</p>");
   }
 }
+pokemonRepository.add({ name: 'Pikachu', height: 0.4, type: ['electric'] });
+pokemonRepository.add('Raichu'); // Test for validation
 pokemonRepository.getAll().forEach(loopPokemonList);
