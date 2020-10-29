@@ -41,7 +41,7 @@ ul {
   color: var(--text-color);
   text-decoration: none;
   padding: 16px 32px;
-  margin: 2px 2px;
+  margin: 4px 2px;
   border-radius: 3px;
   border-bottom: 2px solid var(--btn-border-color);
   position: relative;
@@ -59,4 +59,8 @@ ul {
 
 .button-class:active {
   top: 2px;
+}
+
+.button-class::first-letter {
+  text-transform: capitalize;
 }
