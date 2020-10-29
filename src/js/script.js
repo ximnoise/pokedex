@@ -32,7 +32,9 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(pokemon) {
-    console.log(pokemon.name);
+    loadDetails(pokemon).then(() => {
+      console.log(pokemon);
+    });
   }
 
   function addEvent(item, pokemon) {
@@ -57,13 +59,28 @@ let pokemonRepository = (function () {
     })
   }
 
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+    return fetch(url).then((response) => {
+      return response.json();
+    }).then((details) => {
+      // Now add the details to the item
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
+    }).catch((e) => {
+      console.error(e);
+    });
+  }
+
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
     showDetails: showDetails,
     addEvent: addEvent,
-    loadList: loadList
+    loadList: loadList,
+    loadDetails: loadDetails
   };
 })();
 
