@@ -28,6 +28,16 @@ h1 {
   border: 2px solid var(--text-color);
 }
 
+.message {
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--font-size-big);
+}
+
+.hidden {
+  display: none;
+}
+
 ul {
   list-style-type: none;
 }
