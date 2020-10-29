@@ -4,9 +4,7 @@ let pokemonRepository = (function () {
 
   function add(pokemon) {
     if (typeof pokemon === 'object' && 
-    'name' in pokemon && 
-    'height' in pokemon && 
-    'type' in pokemon
+    'name' in pokemon
     ) {
       pokemonList.push(pokemon);
     } else {
