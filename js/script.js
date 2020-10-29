@@ -9,7 +9,11 @@ let pokemonRepository = (function () {
   ];
 
   function add(pokemon) {
-    if (typeof pokemon === 'object') {
+    if (typeof pokemon === 'object' && 
+    'name' in pokemon && 
+    'height' in pokemon && 
+    'type' in pokemon
+    ) {
       pokemonList.push(pokemon);
     } else {
       console.log('The pokemon you want to add is not a object type!');
@@ -20,24 +24,27 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let listItemButton = document.createElement("button");
+  
+    listItemButton.classList.add("button-class");
+    listItemButton.innerText = pokemon.name;
+    
+    pokemonList.appendChild(listItem);
+    listItem.appendChild(listItemButton);
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
-function loopPokemonList(pokemon) {
-  if (pokemon.height >= 2) {
-    document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m) " + "- Wow, that's big" + "</p>");
-  } else {
-    document.write("<p>" + pokemon.name + "(height: " + pokemon.height + "m)" + "</p>");
-  }
-}
-
-function checkObjectKeys(pokemon){
-  console.log(Object.keys(pokemon));
-}
 pokemonRepository.add({ name: 'Pikachu', height: 0.4, type: ['electric'] });
-pokemonRepository.add('Raichu'); // Test for validation
-pokemonRepository.getAll().forEach(loopPokemonList);
-pokemonRepository.getAll().forEach(checkObjectKeys); // Check if all pokemon entry's have the same pattern
+
+pokemonRepository.getAll().forEach((pokemon) => {
+  pokemonRepository.addListItem(pokemon);
+});

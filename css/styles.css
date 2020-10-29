@@ -1,5 +1,56 @@
-* {
-  line-height: 1.6;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --bg-color: #1e2124;
+  --text-color: #7289da;
+  --btn-bg-color: #36393e;
+  --btn-border-color: rgba(114, 137, 218, 0.8);
+  --font-size-small: 18px;
+  --font-size-big: 40px;
+  --font-weight-small: 400;
+  --font-weight-big: 700;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-small);
+}
+
+h1 {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-big);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.button-class {
+  border: none;
+  font-family: inherit;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-big);
+  background-color: var(--btn-bg-color);
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 16px 32px;
+  margin: 2px 2px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--btn-border-color);
+  position: relative;
+}
+
+.button-class:hover,
+.button-class:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--btn-border-color);
+  outline: none;
+}
+
+.button-class:active {
+  top: 2px;
 }
