@@ -45,7 +45,7 @@ let pokemonRepository = (function () {
     return fetch(apiUrl).then((response) => {
       return response.json();
     }).then((json) => {
-      json.result.forEach((item) => {
+      json.results.forEach((item) => {
         let pokemon = {
           name: item.name,
           detailsUrl: item.url
