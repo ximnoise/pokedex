@@ -34,12 +34,25 @@ let pokemonRepository = (function () {
     
     pokemonList.appendChild(listItem);
     listItem.appendChild(listItemButton);
+    addEvent(listItemButton, pokemon);
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon.name);
+  }
+
+  function addEvent(item, pokemon) {
+    item.addEventListener("click", () => {
+      showDetails(pokemon);
+    });
   }
 
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem
+    addListItem: addListItem,
+    showDetails: showDetails,
+    addEvent: addEvent
   };
 })();
 
