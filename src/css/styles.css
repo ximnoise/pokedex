@@ -9,6 +9,10 @@
   --font-weight-big: 700;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
@@ -20,11 +24,14 @@ body {
 h1 {
   font-size: var(--font-size-big);
   font-weight: var(--font-weight-big);
+  text-align: center;
 }
 
 .box {
   max-width: 600px;
-  padding: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
   border: 2px solid var(--text-color);
 }
 
@@ -40,6 +47,10 @@ h1 {
 
 ul {
   list-style-type: none;
+  margin: 0 auto;
+  padding: 0 0;
+  text-align: center;
+  width: 100%;
 }
 
 .button-class {
@@ -55,6 +66,7 @@ ul {
   border-radius: 3px;
   border-bottom: 2px solid var(--btn-border-color);
   position: relative;
+  width: 90%;
 }
 
 .button-class:hover,
