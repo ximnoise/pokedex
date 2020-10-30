@@ -121,6 +121,7 @@ function showModal(title, text) {
   let closeButtonElement = document.createElement("button");
   closeButtonElement.classList.add("modal-close");
   closeButtonElement.innerText = "Close";
+  closeButtonElement.addEventListener("click", hideModal);
 
   let titleElement = document.createElement("h1");
   titleElement.innerText = title;
@@ -135,6 +136,26 @@ function showModal(title, text) {
 
   modalContainer.classList.add("is-visible");
 }
+
+function hideModal() {
+  let modalContainer = document.querySelector("#modal-container");
+  modalContainer.classList.remove("is-visible");
+}
+
+window.addEventListener("keydown", (e) => {
+  let modalContainer = document.querySelector("#modal-container");
+  if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
+    hideModal();
+  }
+});
+
+let modalContainer = document.querySelector("#modal-container");
+modalContainer.addEventListener("click", (e) => {
+  let target = e.target;
+  if (target === modalContainer) {
+    hideModal();
+  }
+});
 
 document.querySelector("#show-modal").addEventListener("click", () => {
   showModal("Modal title", "This is the modal content!");
