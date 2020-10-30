@@ -1,6 +1,6 @@
 :root {
   --bg-color: #1e2124;
-  --text-color: #7289da;
+  --secondary-color: #7289da;
   --btn-bg-color: #36393e;
   --btn-border-color: rgba(114, 137, 218, 0.8);
   --font-size-small: 18px;
@@ -15,7 +15,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-color);
+  color: var(--secondary-color);
   background-color: var(--bg-color);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-small);
@@ -35,7 +35,7 @@ h1 {
   padding: 10px;
   margin: 0 auto;
   text-align: center;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--secondary-color);
 }
 
 .message {
@@ -62,7 +62,7 @@ ul {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-big);
   background-color: var(--btn-bg-color);
-  color: var(--text-color);
+  color: var(--secondary-color);
   text-decoration: none;
   padding: 16px 32px;
   margin: 4px 2px;
@@ -76,7 +76,7 @@ ul {
 .button-class:focus {
   cursor: pointer;
   opacity: 0.8;
-  background-color: var(--text-color);
+  background-color: var(--secondary-color);
   color: var(--bg-color);
   border: 2px solid var(--btn-border-color);
   outline: none;
@@ -112,26 +112,44 @@ ul {
 .modal {
   margin: auto;
   display: inline-block;
-  background: #fff;
+  background: var(--btn-bg-color);
   padding: 15px;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
+  text-transform: capitalize;
   text-align: left;
 }
 
 .modal-close {
   float: right;
+  font-size: 30px;
   border: 0;
   background: none;
-  color: #777;
-  text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 .modal h1 {
   margin-top: 0;
 }
 
+.modal hr {
+  border: 1px solid var(--secondary-color);
+}
+
 .modal p {
   margin-bottom: 0;
 }
 
+.modal img {
+  border: 2px solid var(--btn-border-color);
+  float: right;
+}
+
+@media only screen and (max-width: 450px) {
+  .modal img {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
