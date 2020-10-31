@@ -115,9 +115,6 @@ let pokemonRepository = (function () {
     let heightElement = document.createElement("p");
     heightElement.innerText = `Height: ${height}m`;
 
-    let weightElement = document.createElement("p");
-    weightElement.innerText = `Weight: ${weight}kg`;
-
     let typeElement = document.createElement("p");
     typeElement.classList.add("f-right");
     if (types.length > 1) {
@@ -125,6 +122,9 @@ let pokemonRepository = (function () {
     } else {
       typeElement.innerText = `Types: ${types[0].type.name}`;
     }
+
+    let weightElement = document.createElement("p");
+    weightElement.innerText = `Weight: ${weight}kg`;
 
     modalContainer.appendChild(modal);
     modal.appendChild(closeButtonElement);
