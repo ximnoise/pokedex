@@ -145,6 +145,11 @@ ul {
   float: right;
 }
 
+.f-right {
+  float: right;
+  margin-right: 30px;
+}
+
 @media only screen and (max-width: 450px) {
   .modal img {
     float: none;
