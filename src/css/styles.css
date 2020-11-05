@@ -3,10 +3,6 @@
   --secondary-color: #7289da;
   --btn-bg-color: #e7e7e7;
   --btn-border-color: rgba(114, 137, 218, 0.8);
-  --font-size-small: 18px;
-  --font-size-big: 40px;
-  --font-weight-small: 400;
-  --font-weight-big: 700;
 }
 
 body {
@@ -17,7 +13,7 @@ body {
 .message {
   margin: 0 auto;
   text-align: center;
-  font-size: var(--font-size-big);
+  font-size: 40px;
 }
 
 .hidden {
