@@ -24,7 +24,7 @@ let pokemonRepository = (function () {
     let listItemButton = document.createElement("button");
 
     listItemButton.classList.add("btn", "btn-secondary", "btn-block");
-    listItemButton.setAttribute("data-target", "#pokedexmodal");
+    listItemButton.setAttribute("data-target", "#pokedexModal");
     listItemButton.setAttribute("data-toggle", "modal");
     listItemButton.setAttribute("data-keyboard", true);
     listItemButton.innerText = pokemon.name;

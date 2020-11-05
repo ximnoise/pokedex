@@ -50,3 +50,21 @@ body {
   border: 2px solid var(--btn-border-color);
   outline: none;
 }
+
+.modal-body {
+  background-color: var(--btn-bg-color);
+}
+
+.modal-body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-body p:last-child {
+  text-transform: capitalize;
+}
+
+.modal-title {
+  text-transform: uppercase;
+}
