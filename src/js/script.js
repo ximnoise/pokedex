@@ -23,7 +23,9 @@ let pokemonRepository = (function () {
     let listItem = document.createElement("li");
     let listItemButton = document.createElement("button");
 
-    listItemButton.classList.add("button-class");
+    listItemButton.classList.add("btn");
+    listItemButton.classList.add("btn-outline-secondary");
+    listItemButton.classList.add("btn-block");
     listItemButton.classList.add("#show-modal");
     listItemButton.innerText = pokemon.name;
 
