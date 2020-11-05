@@ -1,7 +1,7 @@
 :root {
   --bg-color: #1e2124;
   --secondary-color: #7289da;
-  --btn-bg-color: #36393e;
+  --btn-bg-color: #e7e7e7;
   --btn-border-color: rgba(114, 137, 218, 0.8);
   --font-size-small: 18px;
   --font-size-big: 40px;
@@ -11,10 +11,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--secondary-color);
   background-color: var(--bg-color);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-small);
 }
 
 .message {
@@ -28,7 +25,7 @@ body {
 }
 
 .btn {
-  background-color: #e7e7e7;
+  background-color: var(--btn-bg-color);
   border: 2px solid #000;
   color: #000;
   padding: 16px 32px;
@@ -52,12 +49,4 @@ body {
   color: var(--bg-color);
   border: 2px solid var(--btn-border-color);
   outline: none;
-}
-
-.btn:active {
-  top: 2px;
-}
-
-.btn::first-letter {
-  text-transform: capitalize;
 }
