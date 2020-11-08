@@ -72,7 +72,7 @@ let pokemonRepository = (function () {
       return response.json();
     }).then((details) => {
       // Now add the details to the item
-      item.imageUrl = details.sprites.front_default;
+      item.imageUrl = details.sprites.other['official-artwork'].front_default;
       item.height = details.height;
       item.types = details.types;
       item.weight = details.weight;
@@ -109,6 +109,7 @@ let pokemonRepository = (function () {
 
     // Define elements of the pokemon modal
     let imgElement = document.createElement('img');
+    imgElement.classList.add('img-fluid', 'w-100');
     imgElement.src = text.imageUrl;
 
     let heightElement = document.createElement('p');
