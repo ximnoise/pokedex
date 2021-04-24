@@ -1,4 +1,14 @@
 # Pokedex
 
-This small web app is a part of my Bootcamp at CareerFoundry. It contains HTML, CSS/Bootstrap and
-JavaScript that loads data from a external Pokemon API and show the data end points in detail.
+This small web application with HTML, CSS, Bootstrap and JavaScript that loads data from an external Pokemon API and enables the viewing of data points in detail.
+
+## Features
+
+- Load data from an external source (API)
+- View a list of items
+- On user action (e.g., by clicking on a list item), view details for that item
+
+## Technologies
+
+- [Pokemon API](https://pokeapi.co)
+- [Bootstrap](https://getbootstrap.com)
